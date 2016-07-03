@@ -40,9 +40,10 @@ def _get_images_url(page_list):
 
 def _downloader(urls):
     ext = urls[-1].split('.')[-1]
+    count = len(urls)
     hdr = {'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.64 Safari/537.11'}
     for n, url in enumerate(urls):
-        print 'Downloading', url
+        print '(' + str(n+1) + '/' + str(count) + ')', 'Downloading', url
         file_name = str(n) + '.' + ext
         request = urllib2.Request(url, headers=hdr)
         u = urllib2.urlopen(request)
