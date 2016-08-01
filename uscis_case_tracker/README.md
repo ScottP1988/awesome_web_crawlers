@@ -1,5 +1,5 @@
 ## Usage:
-`uscis.py [13-digts case number]`
+`uscis.py [13-digits case number]`
 
 ## Example:
 ```bash
